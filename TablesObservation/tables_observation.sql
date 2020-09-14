@@ -29,6 +29,17 @@ group by deptno
 order by sum
 
 /* form every possible manager pairs */
+create view managers as
+select *
+from   emp
+where  job='MANAGER'
+
+select  SUBSTR(SYS_CONNECT_BY_PATH(ename, ','), 2) as combination
+from    managers
+where   level      = 2  
+connect by prior ename < ename and level <= 2
+
+/* comparing all people to their managers (MGR) */
 select   emp1.empno, emp1.job, emp1.deptno, emp2.empno as MGR_EMPNO, emp2.job as MGR_JOB, emp2.deptno as MGR_DEPTNO
 from     emp emp1
 join     emp emp2
