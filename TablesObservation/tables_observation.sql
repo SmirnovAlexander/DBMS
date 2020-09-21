@@ -23,10 +23,12 @@ group by job
 order by min asc
 
 /* summary salary per department */
-select   deptno, sum(sal) as sum
-from     emp
-group by deptno
-order by sum
+select    dept.dname, coalesce(sum(emp.sal), 0) as sum
+from      dept
+left join emp
+on        emp.deptno = dept.deptno
+group by  dept.dname
+order by  sum
 
 /* form every possible manager pairs */
 select emp1.ename, emp2.ename
