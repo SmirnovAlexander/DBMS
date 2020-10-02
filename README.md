@@ -33,27 +33,27 @@ Below listed all tasks with links and descriptions.
 
 [Oracle objects slides](slides/03_OracleObjects_1.pdf)
 
-- [2.1]()
+- [2.1](ObjectViews/object_views.sql)
 
     - take a look at system views
     - detect number of available tables
     - print content of a table that exists in `ALL_TABLES`, but not exists in `USER_TABLES`
 
-- [2.2]()
+- [2.2](ObjectViews/object_views.sql)
 
     - take a look at system view integrity rules, count them
     - add integrity rule that limits salary; make sure it exists in system view; write query to show name of this rule
     - delete this integrity rule
     - add integrity rule with explicit naming; make sure it exists in system view
 
-- [2.3]()
+- [2.3](ObjectViews/object_views.sql)
 
     - take a look at content of views that are connected with indexes in their scheme
     - count number of indexes in scheme
     - create index-organized table `DEPT1` (same as `DEPT`); fill content with `DEPT` table
 
-## Homework 2. 
-04.10.20
+## Homework 3. 
+03.10.20
 
 [Oracle objects slides](slides/04_OracleObjects_2.pdf)
 
