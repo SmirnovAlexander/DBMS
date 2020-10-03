@@ -33,20 +33,20 @@ Below listed all tasks with links and descriptions.
 
 [Oracle objects slides](slides/03_OracleObjects_1.pdf)
 
-- [2.1](ObjectViews/object_views.sql)
+- [2.1](ObjectViews/object_views_1.sql)
 
     - take a look at system views
     - detect number of available tables
     - print content of a table that exists in `ALL_TABLES`, but not exists in `USER_TABLES`
 
-- [2.2](ObjectViews/object_views.sql)
+- [2.2](ObjectViews/object_views_1.sql)
 
     - take a look at system view integrity rules, count them
     - add integrity rule that limits salary; make sure it exists in system view; write query to show name of this rule
     - delete this integrity rule
     - add integrity rule with explicit naming; make sure it exists in system view
 
-- [2.3](ObjectViews/object_views.sql)
+- [2.3](ObjectViews/object_views_1.sql)
 
     - take a look at content of views that are connected with indexes in their scheme
     - count number of indexes in scheme
@@ -57,7 +57,7 @@ Below listed all tasks with links and descriptions.
 
 [Oracle objects slides](slides/04_OracleObjects_2.pdf)
 
-- [3.1]()
+- [3.1](ObjectViews/object_views_2.sql)
 
     Create views:
     - numbers and names of workers who was applied at winter
@@ -65,19 +65,19 @@ Below listed all tasks with links and descriptions.
 
     Take a look at these views.
 
-- [3.2]()
+- [3.2](ObjectViews/object_views_2.sql)
 
     - create sequence for table `DEPT1` with `CASH=20`
     - generate 10 values with this sequence (fill table `DEPT1`)
     - make sure it fills as you expected
     - find this sequence in system views
 
- - [3.3]()
+ - [3.3](ObjectViews/object_views_2.sql)
 
     - create and execute stored procedure that calculates factorial 
     - create and execute procedure that accepts employee number and returns number of days he worked
 
- - [3.4]()
+ - [3.4](ObjectViews/object_views_2.sql)
     
     Create stored procedure that returns statistics about employees and departments
         - number of employees 
@@ -87,14 +87,35 @@ Below listed all tasks with links and descriptions.
 
     For outputing use package `dbms_output`
 
- - [3.5]()
+ - [3.5](ObjectViews/object_views_2.sql)
 
     - create table `debug_log` and appropriate sequence
     - create and execute procedure that returns hire date of worker that work more that others; hire date of worker that work least of all; result of procedure write to `debug_log` 
     - view entries of `debug_log` after procedure execution
 
- - [3.6]()
+ - [3.6](ObjectViews/object_views_2.sql)
 
     - create procedure to track dynamical errors
     - create function or procedure that may lead to dynamical error
     - execute appearence and track of 3 dynamical errors in `debug_log`
+
+## Homework 4. 
+10.10.20
+
+[Triggers slides](slides/05_Triggers.pdf)
+
+- [4.1]()
+
+    - create trigger that automatically generate values for table (use sequence)
+    - create trigger that automatically generate values for table (without sequence)
+    - create trigger that writes in journal events of creating, changing and deleting tables, views and sequences
+        - type of event
+        - object name
+        - time
+        - etc
+    - show triggers using system views
+
+- [4.2]()
+
+    - create and fill tables using triggers
+    - create journal and write logs to journal
