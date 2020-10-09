@@ -152,7 +152,7 @@ begin
 end;
 /
 
--- create table `debug_log` and appropriate sequence
+-- create table `debug_log`
 create table DEBUG_LOG (
     ID           number(4,0) not null enable, 
     LOG_TIME     date, 
@@ -163,14 +163,68 @@ create table DEBUG_LOG (
 ) 
 organization index;
 
+-- create appropriate sequence
+create sequence DEBUG_LOG_SEQ
+    start with 1
+    increment by 1
+    maxvalue 9999
+    minvalue 1
+    cache 20
+    nocycle;
 
+-- create procedure that returns hire date of worker that work more that others; hire date of worker that work least of all
+create or replace procedure get_date_bounds
+    (oldest_date out date,
+     newest_date out date
+    )
+is
+begin
+    select min(hiredate)
+    into   oldest_date
+    from   emp;
 
--- create and execute procedure that returns hire date of worker that work more that others; hire date of worker that work least of all; result of procedure write to `debug_log` 
+    select max(hiredate)
+    into   newest_date
+    from   emp;
+
+end get_date_bounds;
+/
+
+-- demostrate it works; result of procedure write to `debug_log` 
+declare
+    oldest_date date;
+    newest_date date;
+begin
+    get_date_bounds(oldest_date, newest_date);
+    
+    insert into debug_log(id, log_time, message, in_source)
+    values(debug_log_seq.nextval, sysdate, 'Oldest date: ' || oldest_date || ' ' || 'Newest date: ' || newest_date, 'get_date_bounds');
+    
+    --dbms_output.put_line('Hire date of employee that works most: '  || oldest_date);
+    --dbms_output.put_line('Hire date of employee that works least: ' || newest_date);
+end;
+/
+
+declare
+    oldest_date date;
+    newest_date date;
+begin
+    get_date_bounds(oldest_date, newest_date);
+    
+    insert into debug_log(id, log_time, message, in_source)
+    values(debug_log_seq.nextval, sysdate, 'Oldest date: ' || oldest_date || ' ' || 'Newest date: ' || newest_date, 'get_date_bounds');
+    
+    --dbms_output.put_line('Hire date of employee that works most: '  || oldest_date);
+    --dbms_output.put_line('Hire date of employee that works least: ' || newest_date);
+end;
+/
+
 -- view entries of `debug_log` after procedure execution
+select * from debug_log;
 
 -- drop table and sequence
 drop table debug_log;
-
+drop sequence debug_log_seq;
 
 -- create procedure to track dynamical errors
 -- create function or procedure that may lead to dynamical error
