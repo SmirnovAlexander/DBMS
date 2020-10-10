@@ -119,3 +119,20 @@ Below listed all tasks with links and descriptions.
 
     - create and fill tables using triggers
     - create journal and write logs to journal
+
+## Homework 5. 
+17.10.20
+
+[Apps creations slides](slides/06_AppsCreation.pdf)
+
+- [5.1]()
+
+    Create Oracle app that contains all patterns:
+    - tables report
+    - interactive grid
+    - master detail
+    - master detail by self-referenced integrity rules
+    - charts
+    - tree pages
+    - procedure invoke
+    Choose sample database (`SQL Workshop` -> `Utilities` -> `Sample Datasets`)
