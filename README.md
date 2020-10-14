@@ -104,7 +104,7 @@ Below listed all tasks with links and descriptions.
 
 [Triggers slides](slides/05_Triggers.pdf)
 
-- [4.1]()
+- [4.1](Triggers/triggers.sql)
 
     - create trigger that automatically generate values for table (use sequence)
     - create trigger that automatically generate values for table (without sequence)
@@ -115,7 +115,7 @@ Below listed all tasks with links and descriptions.
         - etc
     - show triggers using system views
 
-- [4.2]()
+- [4.2](Triggers/triggers.sql)
 
     - create and fill tables using triggers
     - create journal and write logs to journal
