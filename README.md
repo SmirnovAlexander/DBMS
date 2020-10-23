@@ -125,7 +125,7 @@ Below listed all tasks with links and descriptions.
 
 [Apps creations slides](slides/06_AppsCreation.pdf)
 
-- [5.1]()
+- [5.1](https://apex.oracle.com/pls/apex/furiousteabag/r/customer-orders/)
 
     Create Oracle app that contains all patterns:
     - tables report
@@ -136,3 +136,5 @@ Below listed all tasks with links and descriptions.
     - tree pages
     - procedure invoke
     Choose sample database (`SQL Workshop` -> `Utilities` -> `Sample Datasets`)
+
+    Supporting script provided [here](AppsBuilding/support_objects.sql)
