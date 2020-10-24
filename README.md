@@ -138,3 +138,28 @@ Below listed all tasks with links and descriptions.
     Choose sample database (`SQL Workshop` -> `Utilities` -> `Sample Datasets`)
 
     Supporting script provided [here](AppsBuilding/support_objects.sql)
+
+## Homework 6. 
+31.10.20
+
+[Authorization slides](slides/07_AuthorizationAuthentication.pdf)
+[App creation stages slides](slides/08_AppCreationStages.pdf)
+[Sample app demands](AppCreationFromScratch/Documents/AppDemands.pdf)
+[Sample terms of reference](AppCreationFromScratch/Documents/ToR.pdf)
+
+- [6.1](AppCreationFromScratch/AppDemands/)
+
+    - read [library database decription](AppCreationFromScratch/Documents/ProjectsDescriptions.pdf)
+    - write demands to application
+    - write terms of reference to application
+
+## Homework 7. 
+07.11.20
+
+[App demands](AppCreationFromScratch/AppDemands/)
+[Terms of reference](AppCreationFromScratch/AppDemands/)
+
+- [7.1](AppCreationFromScratch/App/)
+
+    - create app according to documents from previous hw
+    - app should be oriented on several users' groups
