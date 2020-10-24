@@ -143,8 +143,11 @@ Below listed all tasks with links and descriptions.
 31.10.20
 
 [Authorization slides](slides/07_AuthorizationAuthentication.pdf)
+
 [App creation stages slides](slides/08_AppCreationStages.pdf)
+
 [Sample app demands](AppCreationFromScratch/Documents/AppDemands.pdf)
+
 [Sample terms of reference](AppCreationFromScratch/Documents/ToR.pdf)
 
 - [6.1](AppCreationFromScratch/AppDemands/)
@@ -157,6 +160,7 @@ Below listed all tasks with links and descriptions.
 07.11.20
 
 [App demands](AppCreationFromScratch/AppDemands/)
+
 [Terms of reference](AppCreationFromScratch/AppDemands/)
 
 - [7.1](AppCreationFromScratch/App/)
