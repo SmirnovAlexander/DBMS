@@ -1,0 +1,145 @@
+\documentclass[a4paper,10pt]{article}
+
+% Encoding.
+\usepackage{geometry}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+
+% No line breaks.
+\usepackage[none]{hyphenat}
+
+% Links are clickable.
+\usepackage{hyperref}
+
+% Image insertion.
+\usepackage{svg}
+
+% Math functions.
+\usepackage{amsmath}
+
+% Code insertion.
+\usepackage[outputdir=build]{minted}
+
+\title{\textbf{SUPERLIB} \\
+       \large Требования}
+\author{ Смирнов Александр }
+\date{\today}
+
+\begin{document}
+
+
+    \maketitle
+
+
+    \tableofcontents
+    \newpage
+     
+
+    \section{Общее описание}
+
+
+        Приложение \textbf{SUPERLIB} -- система, ориентированная на учёт выдачи и возврата книг в библиотеке, регистрацию запросов на книги и резервирование книг. 
+
+        Сотрудник библиотеки регистрирует выданные посетителю и возвращенные им книги. Данные о выданных книгах сохраняются в истории выдач. Если нужная посетителю книга в данный момент находится на руках, сотрудник библиотеки регистрирует запрос на нее и ставит его в очередь ожидания. Если посетитель хочет зарезервировать за собой книгу на определенный период времени, сотрудник библиотеки проверяет, нет ли заказов на резервирование этой книги на этот период и, если их нет, резервирует книгу для данного посетителя на данный период.  
+
+        В приложении предусмотрена следующуя возможность: самым активным посетителям присылается по почте оповещение о новых поступлениях книг наиболее предпочитаемого ими типа.
+
+
+    \section{Технические особенности}
+
+     
+        Приложение \textbf{SUPERLIB} должно функционировать как web-приложение и работать под следующими web-браузерами: 
+         
+        \begin{itemize}
+            \item Google Chome
+            \item IE 
+            \item FireFox 
+            \item Safary 
+            \item Opera 
+        \end{itemize}
+        
+     
+    \section{Категории пользователей }
+
+     
+        Приложение \textbf{SUPERLIB} будет ориентировано на следующие категории пользователей: 
+
+        \begin{itemize}
+            \item Сотрудник библиотеки
+            \item Суперпользователь
+            \item Клиент (посетитель библиотеки)
+        \end{itemize}
+
+
+    \newpage
+
+    \section{Функциональность }
+
+     
+        \subsection{Сотрудник библиотеки}
+
+            \begin{itemize}
+                \item Регистрация нового посетителя
+                    \begin{itemize}
+                        \item ФИО
+                        \item паспортные данные
+                        \item электронный адрес
+                        \item телефон
+                    \end{itemize}
+                \item Редактирование данных посетителя
+                \item Добавление новой книги
+                    \begin{itemize}
+                        \item название
+                        \item автор
+                        \item издатель
+                        \item год выпуска
+                    \end{itemize}
+                \item Редактирование данных книги
+                \item Добавление книги в таблицу выданных книг
+                    \begin{itemize}
+                        \item посетитель
+                        \item книга
+                        \item дата получения 
+                        \item дата возврата
+                    \end{itemize}
+                \item Редактирование даты возврата выданной книги
+                \item Добавление книги в таблицу очереди
+                    \begin{itemize}
+                        \item посетитель
+                        \item книга
+                        \item дата получения 
+                        \item дата возврата
+                    \end{itemize}
+                \item Редактирование и удаление записей в таблице очередей
+                \item Получение отчётов по выданным книгам
+            \end{itemize}
+
+
+        \newpage
+
+
+        \subsection{Суперпользователь}
+
+            \begin{itemize}
+                \item Регистрация нового сотрудника библиотеки
+                    \begin{itemize}
+                        \item ФИО
+                        \item паспортные данные
+                        \item электронный адрес
+                        \item телефон
+                    \end{itemize}
+                \item Редактирование данных сотрудника библиотеки
+                \item Изменение / редактирование любых данных
+            \end{itemize}
+
+
+        \subsection{Клиент (посетитель библиотеки)}
+
+            \begin{itemize}
+                \item Напоминание о возврате книги
+                \item Оповещение о новых поступлениях опираясь на историю чтения
+            \end{itemize}
+
+
+\end{document}
