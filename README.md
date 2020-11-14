@@ -171,3 +171,41 @@ Below listed all tasks with links and descriptions.
 
     - create app according to documents from previous hw
     - app should be oriented on several users' groups
+
+## Homework 8. 
+07.11.20
+
+[Effective queries building slides](slides/09_EffectiveQueriesBuilding.pdf)
+
+- [8.1](AnalyticalQueries/Quotes/)
+
+    Use [quotes data](./AnalyticalQueries/Quotes/SPFB.RTS-12.16_161007_161007.txt) to build app that shows:
+
+    - price of RTS index
+    - exponential moving average of price via plot
+
+    One one plot consists of 2 lines and legend, price = (OPEN + HIGH + LOW + CLOSE) / 4
+
+## Homework 9. 
+14.11.20
+
+[Effective queries building slides](slides/09_EffectiveQueriesBuilding.pdf)
+
+- [9.1](./AnalyticalQueries/EnergyConsumption/)
+
+    Use [energy consumption data](./AnalyticalQueries/EnergyConsumption/electric power.xml) to build app that shows
+    summary of consumption with usage of temporary tables for given periods:
+
+    |                   | Утро [6-12) | День[12-18) | Вечер[18-24) | Ночь [0-6) | Итого |
+    |-------------------|:-----------:|:-----------:|:------------:|:----------:|:-----:|
+    | 1 квартал         |             |             |              |            |       |
+    | 2 квартал         |             |             |              |            |       |
+    | 3 квартал         |             |             |              |            |       |
+    | 4 квартал         |             |             |              |            |       |
+    | Итого за 2009 год |             |             |              |            |       |
+    | 1 квартал         |             |             |              |            |       |
+    | 2 квартал         |             |             |              |            |       |
+    | 3 квартал         |             |             |              |            |       |
+    | 4 квартал         |             |             |              |            |       |
+    | Итого за 2010 год |             |             |              |            |       |
+    | Итого             |             |             |              |            |       |
