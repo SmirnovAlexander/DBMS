@@ -214,6 +214,7 @@ Below listed all tasks with links and descriptions.
 21.11.20
 
 [Optimizer hints slides](slides/10_OptimizerHints.pdf)
+
 [Oracle analytical functions slides](slides/11_OracleAnalyticalFunctions.pdf)
 
 - [10.1](./OptimizerHints/)
