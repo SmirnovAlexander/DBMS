@@ -2,6 +2,10 @@
 
 Tasks for [DBMS Application Development course](slides/).
 
+Useful links:
+- [slides sources](https://drive.google.com/drive/folders/1QRcHpSgb1nvePGEDfoD9RmxYP03UMBRE)
+- [completed tasks](https://docs.google.com/spreadsheets/d/1_HDblhT8c0wPTkMDAE8hG0gVNkPNG8oYE1J0k0_NETE/edit#gid=0)
+
 Below listed all tasks with links and descriptions.
 
 ## Homework 1. 
