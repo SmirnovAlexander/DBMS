@@ -214,7 +214,28 @@ Below listed all tasks with links and descriptions.
 21.11.20
 
 [Optimizer hints slides](slides/10_OptimizerHints.pdf)
+[Oracle analytical functions slides](slides/11_OracleAnalyticalFunctions.pdf)
 
 - [10.1](./OptimizerHints/)
 
     Write any query and show that you are able to give hints to optimizer of execution plan (write first hint and make sure that it is used by optimizer, write second hint and make sure that optimizer use it)
+
+## Homework 11. 
+28.11.20
+
+[Task scheduler slides](slides/12_TaskScheduler.pdf)
+
+- [11.1](./TaskScheduler/)
+
+    Create app that allows:
+
+    - perform task execution (start button)
+    - execute task no more than 20-30 times (write to `debug_log` every execution)
+    - task should create in support table dot with 2D coordinates
+    - app should show dynamic of creation new dots as dots on plot (scatter plot or radar)
+    - button for cleaning support table and plot
+
+    Additions:
+
+    - generate random values in range `dbms_random.VALUE(min_val, max_val)`
+    - fix plot scale from the start using dots with min and max values
