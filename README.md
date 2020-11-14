@@ -101,7 +101,7 @@ Below listed all tasks with links and descriptions.
 
     - create procedure to track dynamical errors
     - create function or procedure that may lead to dynamical error
-    - execute appearence and track of 3 dynamical errors in `debug_log`
+    - execute appearance and track of 3 dynamical errors in `debug_log`
 
 ## Homework 4. 
 10.10.20
@@ -156,7 +156,7 @@ Below listed all tasks with links and descriptions.
 
 - [6.1](AppCreationFromScratch/AppDemands/)
 
-    - read [library database decription](AppCreationFromScratch/Documents/ProjectsDescriptions.pdf)
+    - read [library database description](AppCreationFromScratch/Documents/ProjectsDescriptions.pdf)
     - write demands to application
     - write terms of reference to application
 
@@ -209,3 +209,12 @@ Below listed all tasks with links and descriptions.
     | 4 квартал         |             |             |              |            |       |
     | Итого за 2010 год |             |             |              |            |       |
     | Итого             |             |             |              |            |       |
+
+## Homework 10. 
+21.11.20
+
+[Optimizer hints slides](slides/10_OptimizerHints.pdf)
+
+- [10.1](./OptimizerHints/)
+
+    Write any query and show that you are able to give hints to optimizer of execution plan (write first hint and make sure that it is used by optimizer, write second hint and make sure that optimizer use it)
