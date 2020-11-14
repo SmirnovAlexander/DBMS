@@ -193,7 +193,7 @@ Below listed all tasks with links and descriptions.
 
 - [9.1](./AnalyticalQueries/EnergyConsumption/)
 
-    Use [energy consumption data](./AnalyticalQueries/EnergyConsumption/electric\ power.xml) to build app that shows
+    Use [energy consumption data](./AnalyticalQueries/EnergyConsumption/electric_power.xml) to build app that shows
     summary of consumption with usage of temporary tables for given periods:
 
     |                   | Утро [6-12) | День[12-18) | Вечер[18-24) | Ночь [0-6) | Итого |
