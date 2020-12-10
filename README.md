@@ -240,3 +240,28 @@ Below listed all tasks with links and descriptions.
 
     - generate random values in range `dbms_random.VALUE(min_val, max_val)`
     - fix plot scale from the start using dots with min and max values
+
+## Homework 12. 
+05.12.20
+
+[Oracle JSON slides](slides/13_OracleJSON.pdf)
+
+- [12.1]()
+
+    - generate `JSON` document from your data
+    - crate app that show data about 5 favourite films (actors, date, etc); data is loaded from `JSON`
+
+## Homework 13. 
+12.12.20 
+
+[XML basics slides](slides/14_XMLBasics.pdf)
+[XPath slides](slides/15_XPath.pdf)
+[XQuery slides](slides/16_XQuery.pdf)
+[SQL XML slides](slides/17_SQLXML.pdf)
+
+- [13.1]()
+
+    - create `XML` file (+ `XSD` or `DTD`) with mathematic departments data
+    - load file to table
+    - create app with repots
+    - show database content via `XML` document
