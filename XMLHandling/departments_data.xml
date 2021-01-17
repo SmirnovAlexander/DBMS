@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?> 
-<!DOCTYPE faculty_info SYSTEM "departments_data.dtd">
+<!-- <!DOCTYPE faculty_info SYSTEM "departments_data.dtd"> -->
 <faculty_info>
     <students>
         <student>
