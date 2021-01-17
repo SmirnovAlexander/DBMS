@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE faculty_info SYSTEM "departments_data.dtd">
+<faculty_info>
+    <students>
+        <student>
+            <surname>Бирюков</surname>
+            <marks>
+                <mark>
+                    <subject>Математический анализ</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Алгебра</subject>
+                    <grade>5</grade>
+                </mark>
+                <mark>
+                    <subject>Геометрия и топология</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Математическая физика</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Анализ данных</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Алгоритмы СУБД</subject>
+                    <grade>4</grade>
+                </mark>
+            </marks>
+        </student>
+        <student>
+            <surname>Панова</surname>
+            <marks>
+                <mark>
+                    <subject>Математический анализ</subject>
+                    <grade>3</grade>
+                </mark>
+                <mark>
+                    <subject>Алгебра</subject>
+                    <grade>3</grade>
+                </mark>
+                <mark>
+                    <subject>Геометрия и топология</subject>
+                    <grade>5</grade>
+                </mark>
+                <mark>
+                    <subject>Математическая физика</subject>
+                    <grade>3</grade>
+                </mark>
+                <mark>
+                    <subject>Анализ данных</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Алгоритмы СУБД</subject>
+                    <grade>4</grade>
+                </mark>
+            </marks>
+        </student>
+        <student>
+            <surname>Кириллов</surname>
+            <marks>
+                <mark>
+                    <subject>Математический анализ</subject>
+                    <grade>5</grade>
+                </mark>
+                <mark>
+                    <subject>Алгебра</subject>
+                    <grade>5</grade>
+                </mark>
+                <mark>
+                    <subject>Геометрия и топология</subject>
+                    <grade>5</grade>
+                </mark>
+                <mark>
+                    <subject>Математическая физика</subject>
+                    <grade>5</grade>
+                </mark>
+                <mark>
+                    <subject>Анализ данных</subject>
+                    <grade>5</grade>
+                </mark>
+                <mark>
+                    <subject>Алгоритмы СУБД</subject>
+                    <grade>4</grade>
+                </mark>
+            </marks>
+        </student>
+        <student>
+            <surname>Кузнецова</surname>
+            <marks>
+                <mark>
+                    <subject>Математический анализ</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Алгебра</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Геометрия и топология</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Математическая физика</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Анализ данных</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Алгоритмы СУБД</subject>
+                    <grade>4</grade>
+                </mark>
+            </marks>
+        </student>
+        <student>
+            <surname>Фадеева</surname>
+            <marks>
+                <mark>
+                    <subject>Математический анализ</subject>
+                    <grade>5</grade>
+                </mark>
+                <mark>
+                    <subject>Алгебра</subject>
+                    <grade>5</grade>
+                </mark>
+                <mark>
+                    <subject>Геометрия и топология</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Математическая физика</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Анализ данных</subject>
+                    <grade>5</grade>
+                </mark>
+                <mark>
+                    <subject>Алгоритмы СУБД</subject>
+                    <grade>5</grade>
+                </mark>
+            </marks>
+        </student>
+        <student>
+            <surname>Кутуков</surname>
+            <marks>
+                <mark>
+                    <subject>Математический анализ</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Алгебра</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Геометрия и топология</subject>
+                    <grade>5</grade>
+                </mark>
+                <mark>
+                    <subject>Математическая физика</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Функциональное программирование</subject>
+                    <grade>5</grade>
+                </mark>
+            </marks>
+        </student>
+        <student>
+            <surname>Семенова</surname>
+            <marks>
+                <mark>
+                    <subject>Математический анализ</subject>
+                    <grade>3</grade>
+                </mark>
+                <mark>
+                    <subject>Алгебра</subject>
+                    <grade>3</grade>
+                </mark>
+                <mark>
+                    <subject>Геометрия и топология</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Математическая физика</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Функциональное программирование</subject>
+                    <grade>3</grade>
+                </mark>
+            </marks>
+        </student>
+        <student>
+            <surname>Дементьев</surname>
+            <marks>
+                <mark>
+                    <subject>Математический анализ</subject>
+                    <grade>5</grade>
+                </mark>
+                <mark>
+                    <subject>Алгебра</subject>
+                    <grade>5</grade>
+                </mark>
+                <mark>
+                    <subject>Геометрия и топология</subject>
+                    <grade>5</grade>
+                </mark>
+                <mark>
+                    <subject>Математическая физика</subject>
+                    <grade>5</grade>
+                </mark>
+                <mark>
+                    <subject>Функциональное программирование</subject>
+                    <grade>5</grade>
+                </mark>
+            </marks>
+        </student>
+        <student>
+            <surname>Исакова</surname>
+            <marks>
+                <mark>
+                    <subject>Математический анализ</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Алгебра</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Геометрия и топология</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Математическая физика</subject>
+                    <grade>4</grade>
+                </mark>
+                <mark>
+                    <subject>Функциональное программирование</subject>
+                    <grade>4</grade>
+                </mark>
+            </marks>
+        </student>
+        <student>
+            <surname>Лодкин</surname>
+            <marks>
+                <mark>
+                    <subject>Математический анализ</subject>
+                    <grade>3</grade>
+                </mark>
+                <mark>
+                    <subject>Алгебра</subject>
+                    <grade>5</grade>
+                </mark>
+                <mark>
+                    <subject>Геометрия и топология</subject>
+                    <grade>5</grade>
+                </mark>
+                <mark>
+                    <subject>Математическая физика</subject>
+                    <grade>5</grade>
+                </mark>
+                <mark>
+                    <subject>Функциональное программирование</subject>
+                    <grade>5</grade>
+                </mark>
+            </marks>
+        </student>
+    </students>
+    <departments>
+        <department>
+            <name>Кафедра информационно-аналитических систем</name>
+            <head>Михайлова Елена Георгиевна</head>
+            <subjects>
+                <subject>Математический анализ</subject>
+                <subject>Алгебра</subject>
+                <subject>Геометрия и топология</subject>
+                <subject>Математическая физика</subject>
+                <subject>Анализ данных</subject>
+                <subject>Алгоритмы СУБД</subject>
+            </subjects>
+        </department>
+        <department>
+            <name>Кафедра системного программирования</name>
+            <head>Терехов Андрей Николаевич</head>
+            <subjects>
+                <subject>Математический анализ</subject>
+                <subject>Алгебра</subject>
+                <subject>Геометрия и топология</subject>
+                <subject>Математическая физика</subject>
+                <subject>Функциональное программирование</subject>
+            </subjects>
+        </department>
+    </departments>
+</faculty_info>

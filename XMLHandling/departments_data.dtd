@@ -1,0 +1,14 @@
+<?xml encoding="UTF-8"?>
+<!ELEMENT faculty_info (students,departments)>
+<!ELEMENT students (student)*>
+<!ELEMENT student (surname,marks)>
+<!ELEMENT marks (mark)*>
+<!ELEMENT mark (subject,grade)>
+<!ELEMENT subject (#PCDATA)>
+<!ELEMENT grade (#PCDATA)>
+<!ELEMENT surname (#PCDATA)>
+<!ELEMENT departments (department)*>
+<!ELEMENT department (name,head,subjects)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT head (#PCDATA)>
+<!ELEMENT subjects (subject)*>
