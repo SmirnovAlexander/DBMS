@@ -52,3 +52,14 @@ end;
 /
 select * from quotes
 fetch first 10 rows only;
+/
+drop view quotes_view;
+/
+create view quotes_view as
+select TO_CHAR(C_TIME_, 'HH24:MI:SS') as C_TIME_, PRICE, EMA
+from QUOTES
+where PRICE is not null
+order by C_TIME_ asc
+/
+select * from quotes_view
+fetch first 10 rows only;
