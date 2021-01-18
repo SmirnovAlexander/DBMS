@@ -1,25 +1,23 @@
-drop trigger "debug_log_trigger";
-drop trigger "debug_log_trigger_dml";
-drop sequence DEBUG_LOG_SEQ;
-drop table DEBUG_LOG;
-
-
-
+drop sequence debug_log_seq;
+drop table debug_log;
 drop table points;
 
+begin
+dbms_scheduler.drop_program( 'simple_program', true );
+dbms_scheduler.drop_schedule( 'simple_schedule', true );
+end;
+/
 
-create table DEBUG_LOG (
-    ID           number(4,0) not null enable, 
-    LOG_TIME     timestamp, 
-    Event      varchar2(50),
-    constraint DEBUG_LOG_PK primary key (ID) 
+create table debug_log (
+    id           number(4,0) not null enable, 
+    log_time     timestamp, 
+    event      varchar2(50),
+    constraint debug_log_pk primary key (id) 
     using index enable 
 )
  organization index;
 
-
-
-create sequence DEBUG_LOG_SEQ
+create sequence debug_log_seq
     start with 1
     increment by 1
     maxvalue 9999
@@ -27,20 +25,6 @@ create sequence DEBUG_LOG_SEQ
     cache 20
     nocycle;
     
-
-
-
-
-
-
-
-
-begin
-DBMS_SCHEDULER.DROP_program( 'simple_program', TRUE );
-DBMS_SCHEDULER.DROP_SCHEDULE( 'simple_schedule', TRUE );
-end;
-/
-
 create table points
 (
     x number,
@@ -49,48 +33,49 @@ create table points
 
 create or replace procedure insertnew as
 begin
-    insert into points values ( (select dbms_random.VALUE(0,100) from dual) , (select dbms_random.VALUE(0,100) from dual));
-    insert into DEBUG_LOG values( DEBUG_LOG_SEQ.nextval , SYSTIMESTAMP , 'new point into table inserted');
+    insert into points values ( (select dbms_random.value(0,100) from dual) , (select dbms_random.value(0,100) from dual));
+    insert into debug_log values( debug_log_seq.nextval , systimestamp , 'new point into table inserted');
 end;
 /
 
-BEGIN
-DBMS_SCHEDULER.CREATE_PROGRAM
+begin
+dbms_scheduler.create_program
 ( program_name  => 'simple_program',
-  program_type  => 'STORED_PROCEDURE' , 
+  program_type  => 'stored_procedure' , 
   program_action => 'insertnew',
-  enabled       => TRUE
+  enabled       => true
 );
-END;
+end;
 /
-BEGIN
-  DBMS_SCHEDULER.CREATE_SCHEDULE
-     ( schedule_name   => 'simple_schedule',
-       start_date      => SYSTIMESTAMP,
-       repeat_interval => 'FREQ=SECONDLY; INTERVAL=3',
-       end_date        => SYSTIMESTAMP + INTERVAL '1' minute 
-     ) ;
-END;
-/
+
+/* begin */
+/*   dbms_scheduler.create_schedule */
+/*      ( schedule_name   => 'simple_schedule', */
+/*        start_date      => systimestamp, */
+/*        repeat_interval => 'freq=secondly; interval=3', */
+/*        end_date        => systimestamp + interval '1' minute */ 
+/*      ) ; */
+/* end; */
+/* / */
 
 create or replace procedure clearpoints as
 begin
-    EXECUTE IMMEDIATE 'TRUNCATE TABLE points';
-    insert into DEBUG_LOG values( DEBUG_LOG_SEQ.nextval , SYSTIMESTAMP , 'table cleared');
+    execute immediate 'truncate table points';
+    insert into debug_log values( debug_log_seq.nextval , systimestamp , 'table cleared');
 end;
 /
 begin
 clearpoints;
 end;
 /
-BEGIN 
-DBMS_SCHEDULER.create_job (
-    job_name      => 'simple_job',
-    program_name  => 'simple_program',
-    start_date => SYSTIMESTAMP,
-    end_date => SYSTIMESTAMP + INTERVAL '1' minute,
-    repeat_interval => 'FREQ=SECONDLY; INTERVAL=3',
+/* begin */ 
+/* dbms_scheduler.create_job ( */
+/*     job_name      => 'simple_job', */
+/*     program_name  => 'simple_program', */
+/*     start_date => systimestamp, */
+/*     end_date => systimestamp + interval '1' minute, */
+/*     repeat_interval => 'freq=secondly; interval=2', */
 
-    enabled       => TRUE
-);
-end;
+/*     enabled       => true */
+/* ); */
+/* end; */
