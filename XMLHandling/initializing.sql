@@ -1,24 +1,25 @@
-CREATE TABLE facult
+drop table departments_data
+/
+create table departments_data
 ( 
-   id     NUMBER, 
-   data   XMLTYPE 
+   id     number, 
+   data   xmltype 
 );
 /
-insert into facult
-select 1, xmltype(blob_content, nls_charset_id('UTF8')) 
+insert into departments_data
+select 1, xmltype(blob_content, nls_charset_id('utf8')) 
 from apex_application_files
 where filename = 'departments_data.xml'
 /
-select * from facult
+select * from departments_data
 /
-drop view T_13_a;
+drop view surnames_marks;
 /
--- a) фамилии студентов и оценки
-CREATE VIEW T_13_a AS
-SELECT x.*
-FROM
-    facult t,
-    XMLTABLE(
+create view surnames_marks as
+select x.*
+from
+    departments_data t,
+    xmltable(
         '
         for $x in /faculty_info/students/student, $y in $x/marks/mark/grade
        
@@ -28,23 +29,23 @@ FROM
                 <grade>{$y}</grade>
             </student>
         '
-        PASSING t.data
-        COLUMNS 
-            name VARCHAR2(60) PATH '/student/name',
-            grade INTEGER PATH '/student/grade'
+        passing t.data
+        columns 
+            name varchar2(60) path '/student/name',
+            grade integer path '/student/grade'
     ) x
-WHERE
+where
     t.id = 1;
 /
-SELECT * FROM T_13_a;
+select * from surnames_marks;
 /
-drop view T_13_a
+drop view average_scores
 /
-CREATE VIEW T_13_a AS
-SELECT x.*
-FROM
-    facult t,
-    XMLTABLE(
+create view average_scores as
+select x.*
+from
+    departments_data t,
+    xmltable(
         '
         for $x in /faculty_info/students/student
         let $y := avg($x/marks/mark/grade)
@@ -55,25 +56,23 @@ FROM
                 <grade>{$y}</grade>
             </student>
         '
-        PASSING t.data
-        COLUMNS 
-            name VARCHAR2(60) PATH '/student/name',
-            grade VARCHAR2(3) PATH '/student/grade'
+        passing t.data
+        columns 
+            name varchar2(60) path '/student/name',
+            grade varchar2(3) path '/student/grade'
     ) x
-WHERE
+where
     t.id = 1;
 /
-SELECT * FROM T_13_a;
+select * from average_scores;
 /
-
-drop view T_13_a
+drop view all_subjects;
 /
--- a) фамилии студентов и оценки
-CREATE VIEW T_13_a AS
-SELECT x.*
-FROM
-    facult t,
-    XMLTABLE(
+create view all_subjects as
+select x.*
+from
+    departments_data t,
+    xmltable(
         '
         for $x in /faculty_info/departments/department, $y in $x/subjects/subject
         order by $x/name, $y
@@ -83,24 +82,23 @@ FROM
                 <subject>{$y}</subject>
             </department>
         '
-        PASSING t.data
-        COLUMNS 
-            name VARCHAR2(100) PATH '/department/name',
-            subject VARCHAR2(100) PATH '/department/subject'
+        passing t.data
+        columns 
+            name varchar2(100) path '/department/name',
+            subject varchar2(100) path '/department/subject'
     ) x
-WHERE
+where
     t.id = 1;
 /
-SELECT * FROM T_13_a;
+select * from all_subjects;
 /
-
-drop MATERIALIZED view T_13_a
+drop materialized view subjects_every_faculty;
 /
-CREATE MATERIALIZED VIEW T_13_a AS
-    SELECT x.*
-    FROM
-        facult t,
-        XMLTABLE(
+create materialized view subjects_every_faculty as
+    select x.*
+    from
+        departments_data t,
+        xmltable(
             '
             for $x in /faculty_info/departments/department, $y in $x/subjects/subject
             return 
@@ -109,14 +107,28 @@ CREATE MATERIALIZED VIEW T_13_a AS
                     <subject>{$y}</subject>
                 </department>
             '
-            PASSING t.data
-            COLUMNS name VARCHAR2(100) PATH '/department/name',
-                     subject VARCHAR2(100) PATH '/department/subject'
+            passing t.data
+            columns name varchar2(100) path '/department/name',
+                     subject varchar2(100) path '/department/subject'
         ) x
-    WHERE
-        t.id = 1
+    where
+        t.id = 1;
 /
-SELECT subject
-FROM T_13_a
+select subject
+from subjects_every_faculty
 group by subject
 having count(*) >= 2
+/
+select xmlelement("books", xmlagg(xmlelement("book",
+    xmlelement("book_id", book_id),
+    xmlelement("title", title),
+    xmlelement("author", name),
+    xmlelement("release_date", release_date),
+    xmlelement("publisher", publisher),
+    xmlelement("circulation", circulation),
+    xmlelement("cost", cost),
+    xmlelement("rare", rare)))
+) xml_doc from (select * from book) b
+join author a
+on a.author_id = b.author;
+
