@@ -10,7 +10,10 @@ create or replace type power_consumption_info as object(id integer,
 /
 create or replace type power_consumption_stats_t is table of power_consumption_info
 /
-select * from power_consumption order by date_, id
+select * 
+from power_consumption 
+order by date_, id
+fetch first 10 rows only;
 /
 drop table power_consumption_true
 /
@@ -23,7 +26,10 @@ create table power_consumption_true (
 /
 insert into power_consumption_true select id, value, to_date(substr(date_, 0, 10), 'dd.mm.yyyy'), to_number(hour) from power_consumption;
 /
-select * from power_consumption_true order by date_, hour_
+select *
+from power_consumption_true
+order by date_, hour_
+fetch first 10 rows only;
 /
 drop table power_consumption_res
 /
