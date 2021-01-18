@@ -246,7 +246,7 @@ Below listed all tasks with links and descriptions.
 
 [Oracle JSON slides](slides/13_OracleJSON.pdf)
 
-- [12.1]()
+- [12.1](./OracleJSON/)
 
     - generate `JSON` document from your data
     - crate app that show data about 5 favourite films (actors, date, etc); data is loaded from `JSON`
@@ -259,7 +259,7 @@ Below listed all tasks with links and descriptions.
 [XQuery slides](slides/16_XQuery.pdf)
 [SQL XML slides](slides/17_SQLXML.pdf)
 
-- [13.1]()
+- [13.1](./XMLHandling/)
 
     - create `XML` file (+ `XSD` or `DTD`) with mathematic departments data
     - load file to table
