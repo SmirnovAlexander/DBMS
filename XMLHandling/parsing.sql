@@ -114,10 +114,13 @@ create materialized view subjects_every_faculty as
     where
         t.id = 1;
 /
+create view all_subjects_all as
 select subject
 from subjects_every_faculty
 group by subject
 having count(*) >= 2
+/
+select * from all_subjects_all
 /
 select xmlelement("books", xmlagg(xmlelement("book",
     xmlelement("book_id", book_id),
