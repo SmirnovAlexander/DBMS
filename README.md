@@ -167,7 +167,7 @@ Below listed all tasks with links and descriptions.
 
 [Terms of reference](AppCreationFromScratch/AppDemands/)
 
-- [7.1](AppCreationFromScratch/App/)
+- 7.1
 
     - create app according to documents from previous hw
     - app should be oriented on several users' groups
